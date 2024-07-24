@@ -1,16 +1,22 @@
-# linkedin
+# LinkedIn Clone Project
+This project is a clone of LinkedIn's register page, login page, home page, and profile page.
 
-A new Flutter project.
+# Features
+* MVVM Structure: The project is structured using the Model-View-ViewModel (MVVM) pattern.
+* Provider: Utilized Provider for state management and data fetching.
+* Dummy Data Models: Sample data models are used to mimic actual data.
+# User Flow
+1. Signup Page
+Enter a valid email and password to register.
+Redirects to the login page upon successful registration.
 
-## Getting Started
+3. Login Page
+  Enter your login details.
+  Redirects to the home page upon successful login.
 
-This project is a starting point for a Flutter application.
+5. Home Page
+  View the main content and navigation.
+  Access your profile image in the upper left corner.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+7. Profile Page
+  Click on your profile image from the home page to view your profile details.
