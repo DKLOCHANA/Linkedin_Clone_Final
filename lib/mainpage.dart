@@ -10,9 +10,9 @@ class Mainpage extends StatefulWidget {
 }
 
 class _MainpageState extends State<Mainpage> {
-  int _currentIndex = 0;
+  final int _currentIndex = 0;
   final List<Widget> _children = [
-    HomescreenView(),
+    const HomescreenView(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class _MainpageState extends State<Mainpage> {
         selectedItemColor: Colors.black,
         onTap: (value) => (),
         currentIndex: _currentIndex,
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(
                 FontAwesomeIcons.houseChimney,

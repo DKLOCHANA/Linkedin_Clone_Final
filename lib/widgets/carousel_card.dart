@@ -1,25 +1,30 @@
-import 'package:carousel_slider/carousel_options.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:linkedin/viewmodels/carousel_view_model.dart';
 import 'package:provider/provider.dart';
 
-class carouselCard extends StatelessWidget {
-  const carouselCard({super.key});
+class CarouselCard extends StatelessWidget {
+  const CarouselCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     final carouselViewModel = Provider.of<CarouselViewModel>(context);
-    final carosolItems = carouselViewModel.items;
+    final carouselItems = carouselViewModel.items;
+
+    if (carouselItems.isEmpty) {
+      return const SizedBox.shrink();
+    }
+
     return CarouselSlider.builder(
-      itemCount: carosolItems.length,
+      itemCount: carouselItems.length,
       itemBuilder: (BuildContext context, int itemIndex, int pageViewIndex) {
         return Container(
-          margin: EdgeInsets.symmetric(horizontal: 5),
+          margin: const EdgeInsets.symmetric(horizontal: 5),
           decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(20),
-              border: Border.all(color: Color.fromARGB(255, 134, 134, 134))),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(color: const Color.fromARGB(255, 134, 134, 134)),
+          ),
           child: Padding(
             padding: const EdgeInsets.all(10.0),
             child: Column(
@@ -29,20 +34,21 @@ class carouselCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      carosolItems[itemIndex].heading,
-                      style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                      carouselItems[itemIndex].heading,
+                      style: const TextStyle(
+                          fontSize: 16, fontWeight: FontWeight.bold),
                     ),
-                    carosolItems[itemIndex].icon,
+                    carouselItems[itemIndex].icon,
                   ],
                 ),
                 Text(
-                  carosolItems[itemIndex].subtitle,
-                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.normal),
+                  carouselItems[itemIndex].subtitle,
+                  style: const TextStyle(
+                      fontSize: 16, fontWeight: FontWeight.normal),
                 ),
                 Text(
-                  carosolItems[itemIndex].action,
-                  style: TextStyle(
+                  carouselItems[itemIndex].action,
+                  style: const TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
                       color: Color(0xFF0A66C2)),

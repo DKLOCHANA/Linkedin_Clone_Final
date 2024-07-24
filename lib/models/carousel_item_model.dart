@@ -1,4 +1,3 @@
-// lib/models/carousel_item_model.dart
 import 'package:flutter/material.dart';
 
 class CarouselItem {

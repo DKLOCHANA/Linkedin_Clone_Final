@@ -4,7 +4,7 @@ import 'package:linkedin/models/profile_model.dart';
 class ProfileData {
   static UserProfile userProfile = UserProfile(
       name: 'John Doe',
-      verified: Icon(Icons.verified),
+      verified: const Icon(Icons.verified),
       headline: 'Software Engineer at Tech Corp',
       profileUrl: 'assets/images/profileImage3.jpeg',
       backgroundImageUrl: 'assets/images/Banner.png',

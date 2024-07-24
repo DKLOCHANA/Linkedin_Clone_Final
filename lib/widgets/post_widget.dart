@@ -121,7 +121,7 @@ class ListPostWidget extends StatelessWidget {
                     thickness: 0.8,
                     color: Colors.black26,
                   ),
-                  rowButtons(),
+                  const RowButtons(),
                 ],
               ),
             );

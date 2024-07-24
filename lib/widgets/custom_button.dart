@@ -5,25 +5,25 @@ class CustomButton extends StatelessWidget {
   final VoidCallback onPressed;
 
   const CustomButton({
-    Key? key,
+    super.key,
     required this.buttonName,
     required this.onPressed,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
+      style: ElevatedButton.styleFrom(
+        fixedSize: const Size(390, 55),
+      ),
       child: Text(
         buttonName,
-        style: TextStyle(
+        style: const TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.bold,
           color: Colors.white,
         ),
-      ),
-      style: ElevatedButton.styleFrom(
-        fixedSize: const Size(390, 55),
       ),
     );
   }

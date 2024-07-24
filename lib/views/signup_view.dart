@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:linkedin/core/theme/app_colors.dart';
 import 'package:linkedin/viewmodels/signup_view_model.dart';
@@ -10,6 +8,8 @@ import 'package:provider/provider.dart';
 import 'package:linkedin/viewmodels/auth_view_model.dart';
 
 class RegisterView extends StatefulWidget {
+  const RegisterView({super.key});
+
   @override
   _RegisterViewState createState() => _RegisterViewState();
 }
@@ -34,27 +34,27 @@ class _RegisterViewState extends State<RegisterView> {
       appBar: AppBar(),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset('assets/images/image2.png'),
-              SizedBox(height: 10),
-              Text(
+              const SizedBox(height: 10),
+              const Text(
                 'Join LinkedIn',
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Text('or',
+                  const Text('or',
                       style:
                           TextStyle(fontWeight: FontWeight.w400, fontSize: 16)),
                   GestureDetector(
                     onTap: () =>
                         Navigator.pushReplacementNamed(context, '/login'),
-                    child: Text(
+                    child: const Text(
                       ' Sign in',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -64,21 +64,21 @@ class _RegisterViewState extends State<RegisterView> {
                   ),
                 ],
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               Form(
                 key: _formKey,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text('E-mail', style: TextStyle(fontSize: 16)),
+                    const Text('E-mail', style: TextStyle(fontSize: 16)),
                     CustomFormField(
                       labelText: 'E-mail',
                       controller: usernameController,
                       showLabelText: false,
                       validator: (value) => viewModel.validateEmail(value),
                     ),
-                    SizedBox(height: 15),
-                    Text(
+                    const SizedBox(height: 15),
+                    const Text(
                       'Password (6 characters minimum)',
                       style: TextStyle(fontSize: 16),
                     ),
@@ -91,10 +91,10 @@ class _RegisterViewState extends State<RegisterView> {
                       showToggle: true,
                       toggleVisibility: _togglePasswordVisibility,
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     RichText(
                       textAlign: TextAlign.center,
-                      text: TextSpan(
+                      text: const TextSpan(
                         text:
                             'By clicking Accept and Register, you agree to the ',
                         style: TextStyle(color: Colors.black),
@@ -119,7 +119,7 @@ class _RegisterViewState extends State<RegisterView> {
                         ],
                       ),
                     ),
-                    SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     CustomButton(
                       buttonName: 'Accept and Register',
                       onPressed: () {

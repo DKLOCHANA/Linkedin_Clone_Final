@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:linkedin/viewmodels/profile_view_model.dart';
@@ -7,8 +5,8 @@ import 'package:linkedin/widgets/custom_search_box.dart';
 
 import 'package:provider/provider.dart';
 
-class customTopBar extends StatelessWidget {
-  const customTopBar({super.key});
+class CustomTopBar extends StatelessWidget {
+  const CustomTopBar({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +17,7 @@ class customTopBar extends StatelessWidget {
       title: Row(
         children: [
           Padding(
-            padding: EdgeInsets.only(right: 10.0),
+            padding: const EdgeInsets.only(right: 10.0),
             child: GestureDetector(
               onTap: () {
                 Navigator.pushNamed(context, '/profile');
@@ -31,14 +29,14 @@ class customTopBar extends StatelessWidget {
               ),
             ),
           ),
-          Expanded(
-            child: customSearchBox(hintText: 'Search'),
+          const Expanded(
+            child: CustomSearchBox(hintText: 'Search'),
           ),
         ],
       ),
       actions: [
         IconButton(
-          icon: Icon(FontAwesomeIcons.solidCommentDots),
+          icon: const Icon(FontAwesomeIcons.solidCommentDots),
           onPressed: () {},
         ),
       ],

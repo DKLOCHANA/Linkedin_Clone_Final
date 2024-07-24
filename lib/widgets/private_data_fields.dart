@@ -7,25 +7,25 @@ class PrivateDataField extends StatelessWidget {
   final String? description;
 
   const PrivateDataField({
-    Key? key,
+    super.key,
     required this.icon,
     required this.count,
     required this.headline,
     required this.description,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 5),
+      margin: const EdgeInsets.symmetric(vertical: 5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(right: 10.0),
-                child: icon ?? SizedBox.shrink(),
+                padding: const EdgeInsets.only(right: 10.0),
+                child: icon ?? const SizedBox.shrink(),
               ),
               Expanded(
                 child: Column(
@@ -33,21 +33,21 @@ class PrivateDataField extends StatelessWidget {
                   children: [
                     Text(
                       '$count $headline',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     Text(
                       description!,
-                      style: TextStyle(fontSize: 14),
+                      style: const TextStyle(fontSize: 14),
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          Divider(
+          const Divider(
             thickness: 1,
             color: Colors.black26,
           ),
@@ -72,14 +72,14 @@ class educationField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 5),
+      margin: const EdgeInsets.symmetric(vertical: 5),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
             children: [
               Padding(
-                padding: EdgeInsets.only(right: 5.0),
+                padding: const EdgeInsets.only(right: 5.0),
                 child: GestureDetector(
                   onTap: () {
                     Navigator.pushNamed(context, '/profile');
@@ -98,22 +98,22 @@ class educationField extends StatelessWidget {
                     Text(
                       university,
                       style:
-                          TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                          const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     Text(
                       degree,
-                      style: TextStyle(fontSize: 14),
+                      style: const TextStyle(fontSize: 14),
                     ),
                     Text(
                       time,
-                      style: TextStyle(fontSize: 14),
+                      style: const TextStyle(fontSize: 14),
                     ),
                   ],
                 ),
               ),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 20,
           )
         ],

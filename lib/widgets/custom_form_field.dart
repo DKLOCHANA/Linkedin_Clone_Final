@@ -26,7 +26,7 @@ class CustomFormField extends StatelessWidget {
       controller: controller,
       decoration: InputDecoration(
         labelText: showLabelText ? labelText : null,
-        contentPadding: EdgeInsets.all(10),
+        contentPadding: const EdgeInsets.all(10),
         suffixIcon: showToggle == true
             ? TextButton(
                 onPressed: toggleVisibility,

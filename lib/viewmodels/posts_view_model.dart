@@ -1,4 +1,3 @@
-// lib/viewmodels/posts_view_model.dart
 import 'package:flutter/material.dart';
 import 'package:linkedin/data/post_data.dart';
 import 'package:linkedin/models/post_model.dart';

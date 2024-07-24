@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:linkedin/core/theme/app_colors.dart';
 import 'package:provider/provider.dart';
@@ -9,6 +7,8 @@ import 'package:linkedin/widgets/custom_form_field.dart';
 import 'package:linkedin/widgets/custom_button.dart';
 
 class LoginView extends StatefulWidget {
+  const LoginView({super.key});
+
   @override
   _LoginViewState createState() => _LoginViewState();
 }
@@ -34,28 +34,28 @@ class _LoginViewState extends State<LoginView> {
         builder: (context, viewModel, child) {
           return SingleChildScrollView(
             child: Padding(
-              padding: EdgeInsets.all(15),
+              padding: const EdgeInsets.all(15),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Image.asset('assets/images/image2.png'),
-                  SizedBox(height: 10),
-                  Text(
+                  const SizedBox(height: 10),
+                  const Text(
                     'Sign In',
                     style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(height: 3),
+                  const SizedBox(height: 3),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text('or',
+                      const Text('or',
                           style: TextStyle(
                               fontWeight: FontWeight.w400, fontSize: 16)),
                       GestureDetector(
                         onTap: () => Navigator.pushReplacementNamed(
                             context, '/register'),
-                        child: Text(
+                        child: const Text(
                           ' Join LinkedIn',
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
@@ -65,12 +65,12 @@ class _LoginViewState extends State<LoginView> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 5),
-                  Text(
+                  const SizedBox(height: 5),
+                  const Text(
                     'Stay updated on your professional world',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Form(
                     key: _formKey,
                     child: Column(
@@ -80,7 +80,7 @@ class _LoginViewState extends State<LoginView> {
                           labelText: 'E-mail or Phone',
                           controller: usernameController,
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         CustomFormField(
                           labelText: 'Password',
                           controller: passwordController,
@@ -88,15 +88,15 @@ class _LoginViewState extends State<LoginView> {
                           showToggle: true,
                           toggleVisibility: _togglePasswordVisibility,
                         ),
-                        SizedBox(height: 10),
-                        Text(
+                        const SizedBox(height: 10),
+                        const Text(
                           'Forgot Password?',
                           style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
                               color: Palette.buttonColor),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         CustomButton(
                           buttonName: 'Sign In',
                           onPressed: () {
@@ -113,7 +113,7 @@ class _LoginViewState extends State<LoginView> {
                                     context, '/home');
                               } else {
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
+                                  const SnackBar(
                                     content: Text('Invalid credentials'),
                                   ),
                                 );

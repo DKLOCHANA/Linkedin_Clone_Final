@@ -21,24 +21,26 @@ void main() {
         ChangeNotifierProvider(create: (_) => ProfilePrivateViewModel()),
         ChangeNotifierProvider(create: (_) => CarouselViewModel()),
       ],
-      child: MyApp(),
+      child: const MyApp(),
     ),
   );
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'LinkedIn Clone',
       theme: customTheme,
-      home: RegisterView(),
+      home: const RegisterView(),
       routes: {
-        '/register': (context) => RegisterView(),
-        '/login': (context) => LoginView(),
-        '/home': (context) => Mainpage(),
-        '/profile': (context) => ProfileView(),
+        '/register': (context) => const RegisterView(),
+        '/login': (context) => const LoginView(),
+        '/home': (context) => const Mainpage(),
+        '/profile': (context) => const ProfileView(),
       },
     );
   }

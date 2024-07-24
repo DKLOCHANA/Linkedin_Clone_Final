@@ -24,7 +24,7 @@ class _HomescreenViewState extends State<HomescreenView> {
             color: const Color.fromARGB(255, 163, 165, 163),
             child: Column(
               children: [
-                const customTopBar(),
+                const CustomTopBar(),
                 if (postsViewModel.isLoading)
                   const Expanded(
                     child: Center(
