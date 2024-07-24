@@ -1,5 +1,8 @@
+import 'package:flutter/material.dart';
+
 class UserProfile {
   final String name;
+  final Icon verified;
   final String headline;
   final String profileUrl;
   final String backgroundImageUrl;
@@ -21,6 +24,7 @@ class UserProfile {
 
   UserProfile({
     required this.schoolTime,
+    required this.verified,
     required this.universityTime,
     required this.certificate,
     required this.degree,

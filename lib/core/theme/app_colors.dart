@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 
-class Pallete {
-  static const cardColor = Color.fromRGBO(30, 30, 30, 1);
-  static const blueColor = Color.fromRGBO(0, 108, 166, 0);
-  static const subtitleText = Color(0xffa7a7a7);
-  static const inactiveBottomBarItemColor = Color(0xffababab);
-
-  static const Color backgroundColor = Color.fromRGBO(18, 18, 18, 1);
-  static const Color borderColor = Color.fromRGBO(53, 53, 63, 0);
-  static const Color whiteColor = Colors.white;
-  static const Color greyColor = Color.fromARGB(0, 53, 53, 53);
-  static const Color errorColor = Colors.redAccent;
-  static const Color transparentColor = Colors.transparent;
-
-  static const Color inactiveSeekColor = Colors.white38;
+class Palette {
+  static const Color linkedInBlue = Color(0xFF0077B5);
+  static const Color backgroundColor = Color.fromARGB(255, 255, 255, 255);
+  static const Color darkGray = Color(0xFF333333);
+  static const Color lightGray = Color(0xFFD3D3D3);
+  static const Color buttonColor = Color(0xFF0A66C2);
+  static const Color secondaryTextColor = Color(0xFFA7A7A7);
+  static const Color errorColor = Color(0xFFE60023);
 }

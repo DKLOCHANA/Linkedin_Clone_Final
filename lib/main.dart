@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:linkedin/core/theme.dart';
 import 'package:linkedin/mainpage.dart';
 import 'package:linkedin/viewmodels/carousel_view_model.dart';
 import 'package:linkedin/viewmodels/posts_view_model.dart';
 import 'package:linkedin/viewmodels/profile_private_view_model.dart';
-import 'package:linkedin/viewmodels/profile_viewmodel.dart';
+import 'package:linkedin/viewmodels/profile_view_model.dart';
 import 'package:linkedin/views/profile_view.dart';
 import 'package:provider/provider.dart';
 import 'viewmodels/auth_view_model.dart';
@@ -31,14 +32,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'LinkedIn Clone',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: RegisterPage(),
+      theme: customTheme,
+      home: RegisterView(),
       routes: {
-        '/register': (context) => RegisterPage(),
-        '/login': (context) => LoginPage(),
+        '/register': (context) => RegisterView(),
+        '/login': (context) => LoginView(),
         '/home': (context) => Mainpage(),
         '/profile': (context) => ProfileView(),
       },
